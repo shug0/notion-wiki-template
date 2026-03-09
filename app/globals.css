@@ -1,0 +1,270 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+:root {
+  --space-scale: 1;
+  --space-block: calc(0.375rem * var(--space-scale));
+  --space-block-lg: calc(0.75rem * var(--space-scale));
+  --space-heading-sub: calc(0.5rem * var(--space-scale));
+  --space-before-h2: calc(3rem * var(--space-scale));
+  --space-before-h3: calc(2.25rem * var(--space-scale));
+  --space-before-h4: calc(1.5rem * var(--space-scale));
+
+  /* Typography scale */
+  --font-size-body: 1.125rem; /* 18px desktop */
+  --line-height-body: 1.5;
+  --font-size-h1: 2rem; /* 32px */
+  --font-size-h2: 1.6rem; /* ~25.6px */
+  --font-size-h3: 1.3rem; /* ~20.8px */
+  --font-size-h4: 1.1rem; /* ~17.6px */
+  --line-height-heading: 1.2;
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.51 0.23 277);
+  --primary-foreground: oklch(0.96 0.02 272);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.58 0.22 27);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.79 0.1 275);
+  --chart-2: oklch(0.68 0.16 277);
+  --chart-3: oklch(0.59 0.2 277);
+  --chart-4: oklch(0.51 0.23 277);
+  --chart-5: oklch(0.46 0.21 277);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.51 0.23 277);
+  --sidebar-primary-foreground: oklch(0.96 0.02 272);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.59 0.2 277);
+  --primary-foreground: oklch(0.96 0.02 272);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.371 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.79 0.1 275);
+  --chart-2: oklch(0.68 0.16 277);
+  --chart-3: oklch(0.59 0.2 277);
+  --chart-4: oklch(0.51 0.23 277);
+  --chart-5: oklch(0.46 0.21 277);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.68 0.16 277);
+  --sidebar-primary-foreground: oklch(0.96 0.02 272);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .notion-content {
+    @apply w-full;
+  }
+}
+
+/* Axiomatic spacing — tous les espacements inter-blocs sont définis ici.
+   Ordre de cascade : défaut → blocs visuels → headings (les headings gagnent toujours). */
+.notion-blocks {
+  /* 1. Défaut entre blocs */
+  & > * + * {
+    margin-top: var(--space-block);
+  }
+
+  /* 2. Blocs visuels (.notion-visual) : plus d'espace avant et après */
+  & > * + .notion-visual {
+    margin-top: var(--space-block-lg);
+  }
+  & > .notion-visual + * {
+    margin-top: var(--space-block-lg);
+  }
+
+  /* 3. Headings : :is(*, .notion-visual) élève la spécificité au-dessus des blocs visuels */
+  & > :is(*, .notion-visual) + h2 {
+    margin-top: var(--space-before-h2);
+  }
+  & > :is(*, .notion-visual) + h3 {
+    margin-top: var(--space-before-h3);
+  }
+  & > :is(*, .notion-visual) + h4 {
+    margin-top: var(--space-before-h4);
+  }
+
+  & > h2 + *,
+  & > h3 + *,
+  & > h4 + * {
+    margin-top: var(--space-block-lg);
+  }
+
+  /* Headings consécutifs */
+  & > h2 + h3,
+  & > h3 + h4 {
+    margin-top: var(--space-heading-sub);
+  }
+
+  /* 4. Page links consécutifs : pas de gap */
+  & > .notion-page-link + .notion-page-link {
+    margin-top: 0;
+  }
+}
+
+.notion-column-list {
+  @apply flex flex-col md:flex-row w-full gap-8;
+}
+
+/* Headings premiers-enfants d'une colonne : reproduisent le rythme du flux normal.
+   Principe : la colonne est transparente — son contenu se comporte comme dans la page. */
+.notion-column > .notion-blocks > h2:first-child {
+  margin-top: var(--space-before-h2);
+}
+.notion-column > .notion-blocks > h3:first-child {
+  margin-top: var(--space-before-h3);
+}
+.notion-column > .notion-blocks > h4:first-child {
+  margin-top: var(--space-before-h4);
+}
+
+@media (min-width: 768px) {
+  .notion-column {
+    /* Default to flex: 1 (equal columns). --column-ratio overrides when explicitly set. */
+    flex: var(--column-ratio, 1) 1 0px;
+  }
+}
+
+.notion-column {
+  @apply w-full flex flex-col;
+}
+
+.notion-column > .notion-blocks {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.notion-page {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+
+.notion-page h1,
+.notion-page h2,
+.notion-page h3,
+.notion-page h4 {
+  line-height: var(--line-height-heading);
+  letter-spacing: -0.01em;
+}
+
+.notion-page h1 {
+  font-size: var(--font-size-h1);
+  font-weight: 700;
+}
+.notion-page h2 {
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+}
+.notion-page h3 {
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+}
+.notion-page h4 {
+  font-size: var(--font-size-h4);
+  font-weight: 600;
+}
+
+/* Mobile : body légèrement plus grand, titres compressés */
+@media (max-width: 767px) {
+  :root {
+    --font-size-body: 1.0625rem; /* 17px */
+    --font-size-h1: 1.6rem; /* ~25.6px */
+    --font-size-h2: 1.4rem; /* ~22.4px */
+    --font-size-h3: 1.2rem; /* ~19.2px */
+    --font-size-h4: 1.05rem; /* ~16.8px */
+  }
+}
